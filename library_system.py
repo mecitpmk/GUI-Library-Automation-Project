@@ -127,8 +127,8 @@ class GUI(Frame):
             AUTH = df.loc[a,'AUTHOR']
             NCOPY = df.loc[a,'NCOPIES']
             if len(Book.all_book) > 0:
-                should_continue=False
                 for b_obj in Book.all_book:
+                    should_continue=False
                     if b_obj.name == str(TITLE):
                         should_continue = True
                 if should_continue:
